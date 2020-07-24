@@ -12,63 +12,65 @@
 </head>
 <body>
     
-    <div class="container-fluid">
-        <div class="content-todolist">
-            <div class="todo-title">
-                <h1>TODO LIST</h1>
-            </div>
-        </div>
-        <div class="content-todolist">
-            <div class="todo-header">
-                <p>Ajouter votre todo list</p>
-                <div class="todo-form">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fas fa-hand-point-right"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Nom du todo">
-                        </div>
-                        <button type="submit" class="btn btn-success"><i class="fas fa-arrow-right"></i></button>
-                    </form>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center align-content-center">
+        <div class="todo-block">
+            <div class="content-todolist">
+                <div class="todo-title">
+                    <h1 class="text-center font-weight-bold">TODO LIST</h1>
                 </div>
             </div>
-            <div class="todo-body">
-                <ul>
-                    <li>
-                        <span>
-                            <i class="fas fa-edit"></i>
-                        </span>
-                        <p>Todo list 1</p>
-                        <span>&times;</span>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-edit"></i>
-                        </span>
-                        <p>Todo list 1</p>
-                        <span>&times;</span>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-edit"></i>
-                        </span>
-                        <p>Todo list 1</p>
-                        <span>&times;</span>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-edit"></i>
-                        </span>
-                        <p>Todo list 1</p>
-                        <span>&times;</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-footer">
-                <p>Copyright by Harimanana Ratsimbazafy - 2020</p>
+            <div class="content-todolist">
+                <div class="todo-header">
+                    <p>Ajouter votre todo list</p>
+                    <div class="todo-form d-flex flex-row justify-content-center align-items-center align-content-center">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-hand-point-right"></i>
+                                    </span>
+                                </div>
+                                <input type="text" placeholder="Nom du todo">
+                            </div>
+                            <button type="submit" class="btn"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="todo-body">
+                    <ul>
+                        <li>
+                            <span class="primary hand">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <p>Todo list 1</p>
+                            <button class="btn btn-danger">&times;</button>
+                        </li>
+                        <li>
+                            <span class="primary hand">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <p>Todo list 1</p>
+                            <button class="btn btn-danger">&times;</button>
+                        </li>
+                        <li>
+                            <span class="primary hand">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <p>Todo list 1</p>
+                            <button class="btn btn-danger">&times;</button>
+                        </li>
+                        <li>
+                            <span class="primary hand">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <p>Todo list 1</p>
+                            <button class="btn btn-danger">&times;</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="todo-footer">
+                    <p>Copyright by Harimanana Ratsimbazafy - 2020</p>
+                </div>
             </div>
         </div>
     </div>

@@ -2,3 +2,64 @@
 @import '_reset.scss';
 @import '_global.scss';
 
+.container-fluid{
+    margin-top:125px;
+    margin-bottom:50px;
+    & .todo-block{
+        padding:10px;
+        background:$bg;
+        border-radius:5px;
+        box-shadow: 1px 1px 8px 1px $color-theme, 1px 1px 8px 0 $color-theme, 1px 1px 8px 1px $color-theme, 1px 1px 8px 1px $color-theme;
+        & .content-todolist{
+            & .todo-title{
+                padding:10px;
+                color:$bg;
+                text-shadow: -2px 0px $color-theme, 0px 2px $color-theme, 2px 0px $color-theme, 0px -2px $color-theme;
+                font-size:3em;
+                letter-spacing: 5px;
+            }
+            & .todo-header{
+                color:white;
+                text-align:center;
+                font-size:1.3em;
+                font-weight:900;
+            }
+            & .todo-form{
+                box-shadow:-2px 0px $color-theme, 0px 2px $color-theme, 2px 0px $color-theme, 0px -2px $color-theme;
+                & form input{
+                    border:none;
+                    background:$bg;
+                    color:whitesmoke;
+                }
+                & form button{
+                    color:$color-theme;
+                    border-left:1px solid $color-theme;
+                }
+            }
+            & .todo-body{
+                & ul {
+                    padding:5px;
+                    height:250px;
+                    overflow-y:auto;
+                    & li{
+                        display :flex;
+                        flex-direction:row;
+                        justify-content:space-between;
+                        align-items:baseline;
+                        color:white;
+                        padding:10px;
+                        & p{
+                            max-width:180px;
+                        }
+                    }
+                }
+            }
+            & .todo-footer{
+                color:white;
+                text-align:center;
+                border-top:1px solid rgba(0,0,0,0.3);
+                padding:10px 0px;
+            }
+        }
+    }
+}

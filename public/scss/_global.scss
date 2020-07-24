@@ -16,3 +16,19 @@ a{
         text-decoration: none;
     }
 }
+
+p{
+    word-wrap: break-word;
+}
+
+.hand{
+    cursor:pointer;
+}
+
+.danger{
+    color:red;
+}
+
+.primary{
+    color:$primary;
+}
