@@ -23,6 +23,7 @@
                 text-align:center;
                 font-size:1.3em;
                 font-weight:900;
+                & span{ font-size:0.7em;}
             }
             & .todo-form{
                 & form{
@@ -41,7 +42,7 @@
             & .todo-body{
                 & ul {
                     padding:5px;
-                    height:250px;
+                    max-height:250px;
                     overflow-y:auto;
                     & li{
                         display :flex;
