@@ -32,3 +32,23 @@ p{
 .primary{
     color:$primary;
 }
+
+.check-item{
+    width:15px;
+    height:15px;
+    border:1px solid $color-theme;
+    margin-right:5px;
+}
+
+.checked::before{
+    content:'';
+    position:absolute;
+    border-color: $color-theme;
+    border-style:solid;
+    border-width:0 2px 2px 0;
+    top:10px;
+    left:16px;
+    transform:rotate(45deg);
+    height:15px;
+    width:7px;
+}
