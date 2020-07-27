@@ -5,7 +5,7 @@ $(document).ready(function(){
     */
     const notify = $('.todo-header-js').find('.todo-notify-js');
     const todoBody = $('.todo-body-js');
-
+    const todoBlockUl = '<ul><li><a href="#" class="danger init-todo-js">Reinitialiser</a></li></ul>';
     /**
      * Permettre d'effectuer une file d'attente pendant la submission
      */
@@ -33,10 +33,11 @@ $(document).ready(function(){
         if(!submit_todo_valid(newTodo))
         {
             notify.removeClass('d-none');
+            notify.fadeIn().delay(2000).fadeOut();
         } else {
             if(todoBody.find('ul').length == 0)
             {
-                todoBody.append('<ul></ul>');
+                todoBody.append(todoBlockUl);
             }
             todoBody.find('.no-todo-notify-js').addClass('d-none');
             todoBody.find('ul').append(blockTodo(newTodo));
@@ -80,16 +81,32 @@ $(document).ready(function(){
         const form = $(this);
         const editTodo = form.find('input').val();
         const li = todoBody.find('li.edited');
-        if(todoBody.find('ul').length == 0)
+        if(!submit_todo_valid(editTodo))
         {
-            todoBody.append('<ul></ul>');
-            todoBody.find('.no-todo-notify-js').addClass('d-none');
-            todoBody.find('ul').append(blockTodo(editTodo));
+            notify.removeClass('d-none')
+                  .fadeIn()
+                  .delay(2000)
+                  .fadeOut()
+            ;
         } else {
-            li.find('p').text(editTodo);
+            if(todoBody.find('ul').length == 0)
+            {
+                todoBody.append(todoBlockUl);
+                todoBody.find('.no-todo-notify-js').addClass('d-none');
+                todoBody.find('ul').append(blockTodo(editTodo));
+            } else {
+                li.find('p').text(editTodo);
+            }
+            form.removeClass('form-edit-todo-js').addClass('form-add-todo-js');
         }
         form.find('input').val('');
-        form.removeClass('form-edit-todo-js').addClass('form-add-todo-js');
+    }
+
+    function init_todo(e)
+    {
+        e.preventDefault();
+        todoBody.find('ul').remove();
+        todoBody.find('.no-todo-notify-js').removeClass('d-none');
     }
 
     /**Generer une block todo ajouter */
@@ -114,4 +131,6 @@ $(document).ready(function(){
     $(document).on('click','.edit-todo-js',edit_todo);
     
     $(document).on('submit','.form-edit-todo-js',edited_todo);
+
+    $(document).on('click','.init-todo-js',init_todo);
 });
