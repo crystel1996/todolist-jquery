@@ -5,17 +5,7 @@ $(document).ready(function(){
     */
     const notify = $('.todo-header-js').find('.todo-notify-js');
     const todoBody = $('.todo-body-js');
-    const todoBlockUl = '<ul><li><a href="#" class="danger init-todo-js">Reinitialiser</a></li></ul>';
-    /**
-     * Permettre d'effectuer une file d'attente pendant la submission
-     */
-    function front_when_submit()
-    {
-        const formTodo = $('.form-add-todo-js');
-        const btnSubmit = formTodo.find('button[type="submit"]');
-        
-        btnSubmit.children('svg').attr('class','fas fa-spin fa-spinner'); 
-    }
+    const todoBlockUl = '<ul><li class="not-todo-js"><a href="#" class="danger init-todo-js">Reinitialiser</a></li></ul>';
 
     /** Vérifier si le formulaire est valide */
     function submit_todo_valid(todo)
@@ -29,7 +19,6 @@ $(document).ready(function(){
     {
         e.preventDefault();
         const newTodo = $(this).find('input').val();
-        front_when_submit();
         if(!submit_todo_valid(newTodo))
         {
             notify.removeClass('d-none');
@@ -51,7 +40,7 @@ $(document).ready(function(){
         e.preventDefault();
         const li = $(this).parent('li');
         li.remove();
-        if(todoBody.find('ul').children().length == 0)
+        if(todoBody.find('ul li:not(.not-todo-js)').children().length == 0)
         {
             todoBody.find('ul').remove();
             todoBody.find('.no-todo-notify-js').removeClass('d-none');

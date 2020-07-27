@@ -1,0 +1,187 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+html, body {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+}
+
+a {
+  color: #00bb00;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #008800;
+  text-decoration: none;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.danger {
+  color: red;
+}
+
+.primary {
+  color: #2d89ef;
+}
+
+.check-item {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #00bb00;
+  margin-right: 5px;
+}
+
+.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #00bb00;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.container-fluid {
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+.container-fluid .todo-block {
+  padding: 10px;
+  background: #232325;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px 1px #00bb00, 1px 1px 8px 0 #00bb00, 1px 1px 8px 1px #00bb00, 1px 1px 8px 1px #00bb00;
+}
+.container-fluid .todo-block .content-todolist .todo-title {
+  padding: 10px;
+  color: #232325;
+  text-shadow: -2px 0px #00bb00, 0px 2px #00bb00, 2px 0px #00bb00, 0px -2px #00bb00;
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+.container-fluid .todo-block .content-todolist .todo-header {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+.container-fluid .todo-block .content-todolist .todo-header span {
+  font-size: 0.7em;
+}
+.container-fluid .todo-block .content-todolist .todo-form form {
+  box-shadow: -2px 0px #00bb00, 0px 2px #00bb00, 2px 0px #00bb00, 0px -2px #00bb00;
+}
+.container-fluid .todo-block .content-todolist .todo-form form input {
+  border: none;
+  background: #232325;
+  color: whitesmoke;
+}
+.container-fluid .todo-block .content-todolist .todo-form form button {
+  color: #00bb00;
+  border-left: 1px solid #00bb00;
+}
+.container-fluid .todo-block .content-todolist .todo-body ul {
+  padding: 5px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.container-fluid .todo-block .content-todolist .todo-body ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+  padding: 10px;
+}
+.container-fluid .todo-block .content-todolist .todo-body ul li p {
+  max-width: 180px;
+}
+.container-fluid .todo-block .content-todolist .todo-body ul li a {
+  text-decoration: underline;
+}
+.container-fluid .todo-block .content-todolist .todo-footer {
+  color: white;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 10px 0px;
+}
+
+@media (max-width: 600px) {
+  .container-fluid {
+    margin-top: 75px;
+  }
+  .container-fluid .todo-block .content-todolist .todo-title {
+    font-size: 2em;
+  }
+  .container-fluid .todo-block .content-todolist .todo-form form input {
+    width: 180px;
+  }
+  .container-fluid .todo-block .content-todolist .todo-body ul li p {
+    max-width: 120px;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

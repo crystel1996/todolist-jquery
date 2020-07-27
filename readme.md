@@ -1,6 +1,17 @@
-jTodolist utilise jquery, bootstrap, font-awesome et sass
-Author: CrystelRatsimbazafy
-Créé le 23 Juillet 2020
+# TODOLIST  
+	It's a simple todolist project  
 
-jquery, bootstrap, et font-awesome se placent dans le dossier vendor tandis que le generateur sass se place dans le dossier
-public. Le sass se compile et obtiendra un fichier css qui place dans le public/css
+# Getting started  
+	Below you will find the instructions to install and test the project  
+  ## Installing  
+	  - You must have an internet connection to take the test because the app uses a cdn.  
+  ## Built with  
+   * [HTML5](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/HTML5)  
+   * [SASS](https://sass-lang.com/)  
+   * [jQuery](https://jquery.com/)  
+   * [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)  
+   * [bootstrap](https://getbootstrap.com)  
+   * [font-awesome](https://fontawesome.com/)  
+  ## Authors  
+   * **Harimanana Ratsimbazafy** - [crystel1996](https://github.com/crystel1996)  
+    
